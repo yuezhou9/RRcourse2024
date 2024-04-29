@@ -1,0 +1,72 @@
+---
+title: "Breaking Bad TV Show Report"
+author: "yuezhou"
+date: "2024-04-15"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+    theme: cosmo
+  pdf_document: default
+---
+
+# Introduction
+
+*Breaking Bad* is an American television series created by Vince Gilligan. The show premiered on January 20, 2008, and concluded on September 29, 2013. It follows the story of Walter White, a high school chemistry teacher turned methamphetamine manufacturer, as he navigates the criminal underworld to secure his family's financial future after being diagnosed with cancer.
+
+# Summary
+
+## Basic Statistics
+
+According to Wikipedia, *Breaking Bad* received critical acclaim and garnered a dedicated fan base over its five seasons. The show's viewership grew significantly over its run, with the series finale drawing over 10 million viewers.
+
+## Viewership Over Time
+
+```{r viewership_over_time, echo=FALSE, fig.cap="Graph of Viewership Over Time"}
+library(ggplot2)
+
+# Hypothetical data for viewership over time
+seasons <- c("Season 1", "Season 2", "Season 3", "Season 4", "Season 5")
+viewership <- c(1.4, 2.5, 3.8, 5.5, 8.7)  # Hypothetical viewership in millions
+
+# Create a data frame
+viewership_data <- data.frame(Season = seasons, Viewership = viewership)
+
+# Create a line plot
+ggplot(viewership_data, aes(x = Season, y = Viewership, group = 1)) +
+  geom_line(color = "blue") +
+  geom_point(color = "blue", size = 3) +
+  labs(title = "Hypothetical Viewership of Breaking Bad Over Time",
+       x = "Season",
+       y = "Viewership (in millions)") +
+  theme_minimal()
+
+
+## Graph of Episode-to-Episode Changes in Viewership
+
+library(ggplot2)
+
+# Hypothetical data for episode-to-episode changes in viewership
+episodes <- c("Episode 1", "Episode 2", "Episode 3", "Episode 4", "Episode 5")
+viewership_changes <- c(1.4, 1.1, -0.3, 1.7, 2.2)  # Hypothetical changes in viewership in millions
+
+# Create a data frame
+changes_data <- data.frame(Episode = episodes, Viewership_Change = viewership_changes)
+
+# Create a bar plot
+ggplot(changes_data, aes(x = Episode, y = Viewership_Change, fill = Viewership_Change > 0)) +
+  geom_bar(stat = "identity", color = "black") +
+  labs(title = "Hypothetical Episode-to-Episode Changes in Viewership for Breaking Bad",
+       x = "Episode",
+       y = "Viewership Change (in millions)") +
+  scale_fill_manual(values = c("red", "green"), labels = c("Decrease", "Increase")) +
+  theme_minimal()
+
+```
+
+##Short Description of Observed Changes
+
+Over its five-season run, Breaking Bad experienced a remarkable increase in viewership, with the series finale becoming one of the most-watched episodes in television history. The viewership increased from approximately 1.4 million viewers in its first season to over 10 million viewers for the series finale1.
+
+The show maintained a consistent quality throughout its run, which contributed to its growing popularity and critical acclaim. The compelling storytelling, complex characters, and intense drama captivated audiences, making Breaking Bad one of the most iconic and influential TV shows of its time.
