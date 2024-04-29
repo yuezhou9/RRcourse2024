@@ -3,12 +3,12 @@ title: "Breaking Bad TV Show Report"
 author: "yuezhou"
 date: "2024-04-15"
 output:
+  pdf_document: default
   html_document:
     toc: true
     toc_float:
       collapsed: true
     theme: cosmo
-  pdf_document: default
 ---
 
 # Introduction
