@@ -78,7 +78,10 @@ According to Wikipedia, *Breaking Bad* received critical acclaim and garnered a 
 
 ## Viewership Over Time
 
-```{r viewership_over_time, echo=FALSE, fig.cap="Graph of Viewership Over Time"}
+```{r}
+#| label = "viewership_over_time",
+#| echo = FALSE,
+#| fig.cap = "Graph of Viewership Over Time"
 library(ggplot2)
 
 # Hypothetical data for viewership over time
