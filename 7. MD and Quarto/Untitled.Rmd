@@ -1,6 +1,6 @@
 ---
 title: "Breaking Bad TV Show Report"
-author: "Your Name"
+author: "yuezhou"
 date: "2024-04-15"
 output: html_document
 ---
